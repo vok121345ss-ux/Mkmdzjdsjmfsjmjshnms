@@ -1,0 +1,51 @@
+{
+	"geode": "5.11.2",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"version": "v1.1.0",
+	"id": "max.simple-cheats",
+	"name": "Simple Cheats",
+	"developer": "Max",
+	"description": "Noclip, speedhack и простой replay для Geometry Dash.",
+	"settings": {
+		"noclip": {
+			"type": "bool",
+			"name": "Noclip",
+			"description": "Не умирать от препятствий (античит-шип всё равно убивает).",
+			"default": false
+		},
+		"speedhack": {
+			"type": "bool",
+			"name": "Speedhack",
+			"description": "Включить изменение скорости игры.",
+			"default": false
+		},
+		"speed": {
+			"type": "float",
+			"name": "Скорость",
+			"description": "Множитель скорости: 1.0 — обычная, 0.5 — вдвое медленнее, 2.0 — вдвое быстрее. Работает, когда включён Speedhack.",
+			"default": 1.0,
+			"min": 0.1,
+			"max": 10.0
+		},
+		"replay-mode": {
+			"type": "string",
+			"name": "Replay",
+			"description": "Off — выключен. Record — записывает ваши нажатия с начала уровня, запись сохраняется, когда вы проходите уровень. Play — воспроизводит сохранённую запись этого уровня (свои нажатия при этом игнорируются). В практике не работает.",
+			"default": "Off",
+			"one-of": ["Off", "Record", "Play"]
+		},
+		"replay-offset": {
+			"type": "int",
+			"name": "Сдвиг replay (шаги)",
+			"description": "Если воспроизведение «опаздывает» или «торопится», подвиньте нажатия. Положительное число — нажимать позже, отрицательное — раньше. Обычно 0.",
+			"default": 0,
+			"min": -10,
+			"max": 10
+		}
+	}
+}
